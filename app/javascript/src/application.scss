@@ -1,1 +1,101 @@
 @import '~bootstrap/scss/bootstrap';
+
+$cyaan: #55ACEE;
+$light-gray: #fbfcfd;
+html{
+  height: 100%;
+}
+
+body {
+  background-color: $light-gray;
+  height:100vh;
+  font-family: Meiryo, system-ui, BlinkMacSystemFont, sans-serif;
+}
+
+main {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-right: auto;
+  margin-left: auto;
+  height : 100%;
+}
+
+.bg-light{
+  background-color: white !important;
+}
+
+.navbar{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+h1,h2{
+  font-size:1.2rem;
+}
+
+.cyaan {
+  background-color: $cyaan;
+  border-color: $cyaan;
+  color: white;
+}
+
+.user{
+  background-color:white;
+  display:flex;
+}
+
+.user_icon{
+  margin-top: 20px;
+}
+
+
+.to_lists_new {
+  display:block;
+  margin: 1rem auto 2rem auto;
+  &:hover{
+    filter: brightness(95%);
+    color:white;
+  }
+}
+
+.lists {
+  width: 90%;
+  margin: 1rem auto;
+  max-width: 550px;
+}
+
+ul {
+  list-style:none;
+  padding-left: 0;
+}
+
+.list-group-item{
+  padding: 0.7rem 0.5rem;
+  &:hover {
+    background-color: $light-gray;
+  }
+  a{
+    &:hover {
+      color:#337ab7;
+      text-decoration:none;
+    }
+    .row{
+      margin:0;
+    }
+    p{
+      font-size:80%;
+      font-weight: bold;
+    }
+  }
+  &.head{
+    background-color:white;
+    a{
+      color:black;
+    }
+  }
+}
+
+.n-badge{
+  border-radius: 50%;
+  font-size:100%;
+  font-weight: normal;
+}
