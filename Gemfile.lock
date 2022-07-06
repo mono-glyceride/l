@@ -97,6 +97,7 @@ GEM
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
+    hashie (5.0.0)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -123,6 +124,16 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
+    oauth (0.5.10)
+    omniauth (1.9.1)
+      hashie (>= 3.4.6)
+      rack (>= 1.6.2, < 3)
+    omniauth-oauth (1.2.0)
+      oauth
+      omniauth (>= 1.0, < 3)
+    omniauth-twitter (1.4.0)
+      omniauth-oauth (~> 1.1)
+      rack
     orm_adapter (0.5.0)
     parallel (1.22.1)
     parser (3.1.2.0)
@@ -262,6 +273,8 @@ DEPENDENCIES
   haml-rails
   jbuilder (= 2.9.1)
   listen (= 3.1.5)
+  omniauth (= 1.9.1)
+  omniauth-twitter
   pg (= 1.1.4)
   puma (= 4.3.6)
   rails (= 6.0.4)
