@@ -11,6 +11,7 @@ gem 'bootsnap',   '1.10.3', require: false
 
 gem 'omniauth', '1.9.1'
 gem 'omniauth-twitter'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'sqlite3', '1.4.1'
