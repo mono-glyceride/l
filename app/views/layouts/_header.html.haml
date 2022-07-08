@@ -10,4 +10,5 @@
       %li.nav-item
         %a.nav-link{:href => "#"} よくある質問
       %li.nav-item
-        %a.nav-link{:href => "#"} ログアウト
+      =link_to destroy_user_session_path, method: :delete do
+        .nav-link ログアウト
