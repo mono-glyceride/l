@@ -13,16 +13,15 @@ class User < ApplicationRecord
     uid = auth[:uid]
     name = auth[:info][:name]
     image_url = auth[:info][:image]
-    uri = URI.parse(image_url) # パースする必要がある
-    image = uri.open
+    image = URI.parse(image_url) # パースする必要がある
     email = User.dummy_email(auth)
     password = Devise.friendly_token[0, 20]
 
     find_or_create_by(provider: provider, uid: uid) do |user|
-      user.name = user_name
+      user.name = name
       user.email = email
       user.password = password
-      user.image.attach(io: image, filename: "#{user.name}_profile.png")
+      user.image = image
     end
   end
 
