@@ -3,7 +3,8 @@
   .col-7
     %h1
       = @user.name
-    %div @nanashi
+    %div
+      = @user.nickname
     %i.fa-solid.fa-gear
 .lists
   = link_to("新しくリストを管理", {:controller => :lists, :action => :new}, class: "btn cyaan to_lists_new")

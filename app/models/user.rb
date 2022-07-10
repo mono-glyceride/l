@@ -22,6 +22,7 @@ class User < ApplicationRecord
       user.email = email
       user.password = password
       user.image = image
+      user.nickname = auth[:info][:nickname]
     end
   end
 
