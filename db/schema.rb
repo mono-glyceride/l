@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2022_07_07_143613) do
     t.string "provider"
     t.string "name"
     t.string "image"
+    t.string "nickname"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

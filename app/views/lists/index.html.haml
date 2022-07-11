@@ -1,8 +1,10 @@
 .lists.user.row.list-group-item
-  = image_tag "nekko.jpg", alt: "icon", class: "image col-3 rounded-circle"
+  = image_tag @user.image, alt: "icon", class: "image col-3 rounded-circle"
   .col-7
-    %h1 名無し
-    %div @nanashi
+    %h1
+      = @user.name
+    %div
+      = @user.nickname
     %i.fa-solid.fa-gear
 .lists
   = link_to("新しくリストを管理", {:controller => :lists, :action => :new}, class: "btn cyaan to_lists_new")
